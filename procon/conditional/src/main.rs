@@ -5,11 +5,14 @@ fn main() {
         x: i32,
         y: i32,
     }
-    if x > 0 && y > 0 {
-        println!("両方とも正の数です");
+
+    let judgement = if x > 0 && y > 0 {
+        "両方とも正の数です"
     } else if x > 0 || y > 0 {
-        println!("いずれかが正の数です");
+        "いずれかが正の数です"
     } else {
-        println!("終了");
-    }
+        "終了"
+    };
+
+    println!("{}", judgement);
 }
