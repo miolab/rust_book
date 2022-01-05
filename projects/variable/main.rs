@@ -1,6 +1,7 @@
 fn main() {
-  let min_length;
-  let max_length;
+  let min_length: i32;
+  let max_length: i32;
+
   min_length = 3;
   max_length = 5;
 
