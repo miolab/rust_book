@@ -15,5 +15,10 @@ fn main() {
     assert_eq!(a, 1);
     assert_eq!(b, 10);
     assert_eq!(c, 100);
-    println!("pattern match OK.");
+    println!(
+        "pattern match OK. {0}, {1}, {2}",
+        a,
+        b,
+        c
+    );
 }
