@@ -11,4 +11,15 @@ fn main() {
 
     mutable += 100;
     assert_eq!(mutable, 102);
+
+    let arr = [
+        1,
+        2,
+        3,
+    ];
+    let mut sum_arr = 0;
+    for num in &arr {
+        sum_arr += num;
+    }
+    println!("{}", sum_arr);
 }
