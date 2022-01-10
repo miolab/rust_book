@@ -21,4 +21,7 @@ fn main() {
         b,
         c
     );
+
+    println!("arr (one liner): {:?}", arr);
+    println!("arr (with start new line): {:#?}", arr);
 }
