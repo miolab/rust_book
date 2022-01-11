@@ -22,4 +22,16 @@ fn main() {
         sum_arr += num;
     }
     println!("{}", sum_arr);
+
+    // ベクタ
+    let empty_vector = Vec::<i32>::new();
+    println!("空ベクタ:\n{:?}", empty_vector);
+
+    let vector: Vec<i32> = vec![
+        1,
+        2,
+        3,
+    ];
+    assert_eq!(vector.len(), 3_usize);
+    println!("ベクタ:\n{:?}", vector);
 }
