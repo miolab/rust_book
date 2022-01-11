@@ -27,11 +27,14 @@ fn main() {
     let empty_vector = Vec::<i32>::new();
     println!("空ベクタ:\n{:?}", empty_vector);
 
-    let vector: Vec<i32> = vec![
+    let mut vector: Vec<i32> = vec![
         1,
         2,
         3,
     ];
     assert_eq!(vector.len(), 3_usize);
+    assert_eq!(vector[0], 1_i32);
+
+    vector[1] = 10;
     println!("ベクタ:\n{:?}", vector);
 }
