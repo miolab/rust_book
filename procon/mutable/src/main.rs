@@ -27,6 +27,10 @@ fn main() {
     let empty_vector = Vec::<i32>::new();
     println!("空ベクタ:\n{:?}", empty_vector);
 
+    let empty_another_vector: Vec<u32>;
+    empty_another_vector = Vec::new();
+    println!("空ベクタ_v2:\n{:?}", empty_another_vector);
+
     let mut vector: Vec<i32> = vec![
         1,
         2,
