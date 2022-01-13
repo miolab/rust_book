@@ -44,6 +44,11 @@ fn main() {
     vector[1] = 10;
     println!("ベクタ:\n{:?}", vector);
 
+    // for式での取り扱い
+    for i in &vector {
+        println!("{}", i);
+    }
+
     // 値の追加と削除
     let mut mutable_vector = Vec::new();
     assert_eq!(mutable_vector.len(), 0);
