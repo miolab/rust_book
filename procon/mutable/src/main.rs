@@ -68,4 +68,14 @@ fn main() {
             40,
         ]
     );
+
+    mutable_vector.pop();
+    assert_eq!(
+        mutable_vector,
+        vec![
+            10,
+            20,
+            30,
+        ]
+    );
 }
