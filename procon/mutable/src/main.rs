@@ -1,3 +1,5 @@
+use proconio::input;
+
 fn main() {
     let mut mutable: i32;
 
@@ -78,4 +80,10 @@ fn main() {
             30,
         ]
     );
+
+    input! {
+        n: usize,
+        input_vector: [i32; n],
+    }
+    println!("ベクタ生成:\n{:?}", input_vector);
 }
