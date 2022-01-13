@@ -86,6 +86,7 @@ fn main() {
         ]
     );
 
+    println!("ベクタ生成: 要素数と要素(i32)を入力...");
     input! {
         n: usize,
         input_vector: [i32; n],
