@@ -41,4 +41,31 @@ fn main() {
 
     vector[1] = 10;
     println!("ベクタ:\n{:?}", vector);
+
+    // 値の追加と削除
+    let mut mutable_vector = Vec::new();
+    assert_eq!(mutable_vector.len(), 0);
+
+    mutable_vector.push(10_i32);
+    mutable_vector.push(20);
+    mutable_vector.push(30);
+    assert_eq!(
+        mutable_vector,
+        vec![
+            10,
+            20,
+            30,
+        ]
+    );
+
+    mutable_vector.push(40);
+    assert_eq!(
+        mutable_vector,
+        vec![
+            10,
+            20,
+            30,
+            40,
+        ]
+    );
 }
