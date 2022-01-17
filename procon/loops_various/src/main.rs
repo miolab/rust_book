@@ -22,7 +22,18 @@ fn main() {
         println!("{},", i)
     }
 
+    // while 式
+    println!("while:");
+    let mut a = 30;
+    let mut vec = Vec::new();
+    while a > 0 {
+        vec.push(a);
+        a /= 2;
+    }
+    println!("{:?},", vec);
+
     // loop 式
+    println!("loop:");
     loop {
         input! {
             x: i32,
