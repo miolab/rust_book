@@ -7,7 +7,14 @@ fn main() {
         if i == 14 {
             break;
         }
-        println!("{}, ", i);
+        println!("{},", i);
     }
     println!("done");
+
+    for i in 21..25 {
+        println!("{},", i)
+    }
+    for i in 31..=35 {
+        println!("{},", i)
+    }
 }
