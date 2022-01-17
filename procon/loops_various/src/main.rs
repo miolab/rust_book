@@ -14,6 +14,30 @@ fn main() {
     }
     println!("done");
 
+    // for 式 (二重ループ。ラベルなし)
+    for i in 0..6 {
+        for j in 0..i {
+            if i + j == 4 {
+                break;
+            }
+            print!("({0}, {1}) ", i ,j)
+        }
+        println!();
+    }
+
+    // for 式 (二重ループ。ラベルあり)
+    'outer_loop: for i in 0..6 {
+        for j in 0..i {
+            if i + j == 4 {
+                break 'outer_loop;
+            }
+            print!("({0}, {1}) ", i ,j)
+        }
+        println!();
+    }
+
+    println!();
+
     // `..` 演算子
     for i in 21..25 {
         println!("{},", i)
@@ -33,7 +57,7 @@ fn main() {
     println!("{:?},", vec);
 
     // loop 式
-    println!("loop:");
+    println!("loop: (x 10)");
     loop {
         input! {
             x: i32,
@@ -46,6 +70,7 @@ fn main() {
     }
 
     // loop 式（break で値を返す方法）
+    println!("loop: (square)");
     let val = loop {
         input! {
             x: i32,
