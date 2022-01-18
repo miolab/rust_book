@@ -11,4 +11,24 @@ fn main() {
     let vector = vec![4, 5, 6];
     ref_slice = &vector;
     println!("{:?}", ref_slice);
+
+    // 部分スライス
+    let arr_for_partial_slice = [
+        0,
+        10,
+        20,
+        30,
+        40,
+        50,
+    ];
+    let ref_partial_slice = &arr_for_partial_slice[1..4];
+    assert_eq!(ref_partial_slice[0], 10);
+    assert_eq!(ref_partial_slice[1], 20);
+    assert_eq!(ref_partial_slice[2], 30);
+
+    let ref_partial_over_twenty = &arr_for_partial_slice[3..];
+    assert_eq!(ref_partial_over_twenty[0], 30);
+    assert_eq!(ref_partial_over_twenty[1], 40);
+    assert_eq!(ref_partial_over_twenty[2], 50);
+
 }
