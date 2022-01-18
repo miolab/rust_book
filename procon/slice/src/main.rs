@@ -31,4 +31,38 @@ fn main() {
     assert_eq!(ref_partial_over_twenty[1], 40);
     assert_eq!(ref_partial_over_twenty[2], 50);
 
+    // スライスは for で走査できる
+    for i in &arr_for_partial_slice[..3] {
+        println!("{}", *i);
+    }
+
+    // swap 関数
+    let mut array_for_swap = [
+        0,
+        10,
+        20,
+        30,
+        40,
+    ];
+    let ref_for_swap = &mut array_for_swap[..];
+    ref_for_swap.swap(0, 3);
+    println!("swap:\n{:?}", array_for_swap);
+
+    // reverse 関数
+    let mut array_for_reverse = [
+        0,
+        10,
+        20,
+        30,
+        40,
+    ];
+    array_for_reverse.reverse();
+    println!("reverse (full):\n{:?}", array_for_reverse);
+
+    array_for_reverse[1..4].reverse();
+    println!("reverse (partial):\n{:?}", array_for_reverse);
+
+    // sort 関数
+    array_for_reverse.sort();
+    println!("sort:\n{:?}", array_for_reverse);
 }
