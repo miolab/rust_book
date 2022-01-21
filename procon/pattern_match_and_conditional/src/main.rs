@@ -8,7 +8,7 @@ fn main() {
     let ref_slice: &[i32] = &[10, 15];
 
     if let [x, y, z] = *ref_slice {
-        println!("{0}, {1}, {2}", x, y, z);
+        println!("{}, {}, {}", x, y, z);
     } else {
         println!("Error! pattern match failed.");
     }
@@ -27,6 +27,15 @@ fn main() {
         }
     }
     assert_eq!(vector, vec![92, 94]);
+
+    // 範囲パターン
+    let tpl = (1, 2);
+    if let (0..=5, x) = tpl {
+        assert_eq!(x, 2);
+    } else {
+        // tpl = (6, 2) のようなケースでコンパイルエラーを起こす
+        panic!();
+    }
 
     // リテラルパターン
     println!("タプルのベクタを入力 (3回):");
