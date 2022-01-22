@@ -47,6 +47,15 @@ fn main() {
         println!("ワイルドカードやるぞ！");
     }
 
+    // while let
+    let array_while = [0, 0, 0, 1, 2];
+    let mut ref_slice_while = &array_while[..];
+    while let [0, ..] = *ref_slice_while {
+        ref_slice_while = &ref_slice_while[1..];
+    }
+    assert_eq!(ref_slice_while, [1, 2]);
+    println!("while done.");
+
     // リテラルパターン
     println!("タプルのベクタを入力 (3回):");
     input! {
