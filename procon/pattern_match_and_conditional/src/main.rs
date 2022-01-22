@@ -37,6 +37,16 @@ fn main() {
         panic!();
     }
 
+    // ワイルドカードパターン
+    let tpl_wild_card = (3, 1, 2);
+    if let (1, _, _) | (_, 1, _) | (_, _, 1) = tpl_wild_card {
+        println!("1が少なくとも１つ含まれています");
+    }
+
+    for _ in 0..=2 {
+        println!("ワイルドカードやるぞ！");
+    }
+
     // リテラルパターン
     println!("タプルのベクタを入力 (3回):");
     input! {
