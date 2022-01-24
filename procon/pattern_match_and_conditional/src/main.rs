@@ -75,4 +75,16 @@ fn main() {
             println!("?");
         }
     }
+
+    // match 式
+    println!("タプルを入力 (1 が含まれるか判定):");
+    input! {
+        tuple_match: (i32, i32),
+    }
+    match tuple_match {
+        // アーム(各パターン)を並べていく
+        (1, 1) => println!("どちらも 1"),
+        (1, _) | (_, 1) => println!("片方のみが 1"),
+        _ => println!("どちらも 1 ではない"),
+    }
 }
