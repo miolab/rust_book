@@ -87,4 +87,27 @@ fn main() {
         (1, _) | (_, 1) => println!("片方のみが 1"),
         _ => println!("どちらも 1 ではない"),
     }
+
+    // マッチガード
+    let tuples_match_guard = (1, 3);
+    match tuples_match_guard {
+        (1, x) if x % 2 == 0 => println!("{}", x),
+        _ => {}
+    }
+
+    let tpls_match_guard = [
+        (2, 5),
+        (4, 4),
+        (1, -4),
+        (-3, -3),
+        (18, 18),
+    ];
+    let mut vector_match_guard = Vec::new();
+    for &tpl in &tpls_match_guard {
+        match tpl {
+            (x, y) if x == y => vector_match_guard.push(x),
+            _ => {}
+        }
+    }
+    assert_eq!(vector_match_guard, [4, -3, 18]);
 }
