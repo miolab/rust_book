@@ -11,4 +11,22 @@ fn main() {
     let world = "world".to_string();
     // - 文字列リテラルを使う必要がある。println!(hello); とかはエラーになる。
     println!("{}, {}!", hello, world);
+
+    // chars 関数
+    for c in hello.chars() {
+        println!("{}", c);
+    }
+
+    let s_chars: &str = "打打打打打打打打";
+    // chars 型の文字リテラルは、1つの文字をシングルクォートで囲う
+    let da: char = '打';
+    for c in s_chars.chars() {
+        assert_eq!(c, da);
+    }
+
+    // bytes 関数
+    let s_bytes = "有難う";
+    for c in s_bytes.bytes() {
+        println!("{:x}", c);
+    }
 }
