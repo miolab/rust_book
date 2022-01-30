@@ -29,4 +29,14 @@ fn main() {
     for c in s_bytes.bytes() {
         println!("{:x}", c);
     }
+
+    // to_string
+    let ten: i32 = 10;
+    assert_eq!(ten.to_string(), "10");
+
+    let float_num: f64 = 12.0;
+    assert_eq!(float_num.to_string(), "12");
+
+    let ace: char = 'A';
+    assert_eq!(ace.to_string(), "A");
 }
