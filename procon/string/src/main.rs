@@ -39,4 +39,9 @@ fn main() {
 
     let ace: char = 'A';
     assert_eq!(ace.to_string(), "A");
+
+    // format! マクロ
+    println!("{0} {1}", 10, 2.5);
+    let s_format = format!("{0} {1}", 10, 2.5);
+    assert_eq!(s_format, "10 2.5");
 }
