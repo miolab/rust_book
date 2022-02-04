@@ -3,6 +3,10 @@ fn main() {
     assert_eq!(vec, [
         0, 1, 2, 3,
     ]);
+
+    please_push();
+    please_push();
+    please_push();
 }
 
 fn digits() -> Vec<i32> {
@@ -11,4 +15,9 @@ fn digits() -> Vec<i32> {
         v.push(i);
     }
     v
+}
+
+// `fn please_push() -> ()` のように返り値が `()` なら、`-> ()` の部分は省略可能
+fn please_push() {
+    println!("絶対に押すなよ!");
 }
