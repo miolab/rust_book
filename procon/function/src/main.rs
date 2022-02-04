@@ -7,6 +7,19 @@ fn main() {
     please_push();
     please_push();
     please_push();
+
+    // 環境
+    // 関数が異なると「環境」が異なるため、変数 a を別関数内で使うことは不可
+    fnc();
+
+    // let a = 10;
+    fn fnc() {
+        let b = 20;
+        println!("{}", b);
+
+        // "can't capture dynamic environment in a fn item" のエラーになる
+        // println!("{}", a);
+    }
 }
 
 fn digits() -> Vec<i32> {
