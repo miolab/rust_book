@@ -34,3 +34,7 @@ fn digits() -> Vec<i32> {
 fn please_push() {
     println!("絶対に押すなよ!");
 }
+
+fn fnc_inprogress() -> i32 {
+    todo!();
+}
