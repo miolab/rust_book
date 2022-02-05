@@ -1,5 +1,5 @@
 fn main() {
-    let vec = digits();
+    let vec = digits(0, 4);
     assert_eq!(vec, [
         0, 1, 2, 3,
     ]);
@@ -22,9 +22,9 @@ fn main() {
     }
 }
 
-fn digits() -> Vec<i32> {
+fn digits(a: i32, b: i32) -> Vec<i32> {
     let mut v = Vec::new();
-    for i in 0..4 {
+    for i in a..b {
         v.push(i);
     }
     v
