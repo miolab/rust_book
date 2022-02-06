@@ -25,6 +25,17 @@ fn main() {
         minimum_factor(2021),
         43
     );
+
+    // 標準ライブラリ
+    // REF: https://doc.rust-lang.org/std/cmp/fn.max.html
+    assert_eq!(
+        std::cmp::max(2, 5),
+        5
+    );
+    assert_eq!(
+        std::cmp::min(2, 5),
+        2
+    );
 }
 
 fn digits(a: i32, b: i32) -> Vec<i32> {
