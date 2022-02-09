@@ -8,7 +8,16 @@ fn main() {
         "{:?} の総和は {}",
         vector,
         s
-    )
+    );
+
+    // 可変参照を渡す
+    let mut hoge = 10;
+    double(&mut hoge);
+    assert_eq!(hoge, 20);
+
+    let mut hoge = 10;
+    double(&mut hoge);
+    assert_eq!(hoge, 20);
 }
 
 // fn sum(v: Vec<i32>) -> i32 { // 値渡しになりエラー
@@ -19,4 +28,9 @@ fn sum(v: &Vec<i32>) -> i32 {
         ret += i;
     }
     ret
+}
+
+// 可変参照をとる関数
+fn double(x: &mut i32) {
+    *x *= 2;
 }
