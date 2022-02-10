@@ -1,3 +1,5 @@
+use proconio::input;
+
 fn main() {
     // 参照渡し
     let vector = vec![20, 80, 60, 40];
@@ -25,6 +27,16 @@ fn main() {
     std::mem::swap(&mut x, &mut y);
     assert_eq!(x, 20);
     assert_eq!(y, 10);
+
+    proconio::input! {
+        i: usize,
+        j: usize,
+    }
+    let mut array = [1, 2, 3, 4, 5];
+    // 配列やベクタの2つの要素を入れ替えるときは、swap 関数を使う
+    // `std::mem::swap(&mut array[i], &mut array[j])` は不可
+    array.swap(i, j);
+    println!("{:?}", array);
 }
 
 // fn sum(v: Vec<i32>) -> i32 {... だと値渡しになってエラー
