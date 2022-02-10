@@ -18,9 +18,16 @@ fn main() {
     let mut hoge = 10;
     double(&mut hoge);
     assert_eq!(hoge, 20);
+
+    // `std::mem::swap(&mut a, &mut )` 2つの可変参照を受け取って、その中身を入れ替える
+    let mut x = 10;
+    let mut y = 20;
+    std::mem::swap(&mut x, &mut y);
+    assert_eq!(x, 20);
+    assert_eq!(y, 10);
 }
 
-// fn sum(v: Vec<i32>) -> i32 { // 値渡しになりエラー
+// fn sum(v: Vec<i32>) -> i32 {... だと値渡しになってエラー
 fn sum(v: &Vec<i32>) -> i32 {
     let mut ret = 0;
     // for &i in &v { // 値渡しになりエラー
