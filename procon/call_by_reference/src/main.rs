@@ -28,7 +28,7 @@ fn main() {
     assert_eq!(x, 20);
     assert_eq!(y, 10);
 
-    proconio::input! {
+    input! {
         i: usize,
         j: usize,
     }
@@ -37,6 +37,8 @@ fn main() {
     // `std::mem::swap(&mut array[i], &mut array[j])` は不可
     array.swap(i, j);
     println!("{:?}", array);
+
+    print_with_debug();
 }
 
 // fn sum(v: Vec<i32>) -> i32 {... だと値渡しになってエラー
@@ -52,4 +54,14 @@ fn sum(v: &Vec<i32>) -> i32 {
 // 可変参照をとる関数
 fn double(x: &mut i32) {
     *x *= 2;
+}
+
+fn print_with_debug() {
+    let mut x = 0;
+    for i in 18..=20 {
+        x += i;
+        // dbg! ... 実行結果を一時的に出力する
+        dbg!(x);
+    }
+    println!("{}", x);
 }
