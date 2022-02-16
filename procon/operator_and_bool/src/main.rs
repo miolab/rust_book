@@ -1,6 +1,7 @@
 use proconio::input;
 
 fn main() {
+    // basic operators
     let actual_add = std::ops::Add::add(2, 3);
     assert_eq!(actual_add, 2 + 3);
     let actual_sub = std::ops::Sub::sub(20, 3);
@@ -13,6 +14,13 @@ fn main() {
     let actual_rem = std::ops::Rem::rem(20, 3);
     assert_eq!(actual_rem, 20 % 3);
     assert_eq!(actual_rem, 2);
+
+    // bool
+    let assert_true: bool = true;
+    let assert_false: bool = false;
+    assert_eq!(1 == 1, assert_true);
+    assert_eq!(1 == 2, assert_false);
+
 
     input! {
         x: i32,
