@@ -21,11 +21,16 @@ fn main() {
     assert_eq!(1 == 1, assert_true);
     assert_eq!(1 == 2, assert_false);
 
-
     input! {
         x: i32,
     }
     is_int_five(x);
+
+    for i in 0..100 {
+        if is_prime(i) {
+            println!("{}", i);
+        }
+    }
 }
 
 fn is_int_five(a: i32) {
@@ -35,4 +40,19 @@ fn is_int_five(a: i32) {
     if PartialEq::eq(&a, &5) {
         println!("this is equal to 5! (Re)");
     }
+}
+
+fn is_prime(x: i32) -> bool {
+    if x < 2 {
+        return false;
+    }
+    for i in 2.. {
+        if i * i > x {
+            return true;
+        }
+        if x % i == 0 {
+            return false;
+        }
+    }
+    unreachable!();
 }
