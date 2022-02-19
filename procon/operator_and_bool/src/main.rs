@@ -31,6 +31,13 @@ fn main() {
             println!("{}", i);
         }
     }
+
+    // bool operators (&)
+    // AND
+    assert_eq!(true & true, true);
+    assert_eq!(true & false, false);
+    assert_eq!(false & false, false);
+    assert_eq!(false & false, false);
 }
 
 fn is_int_five(a: i32) {
