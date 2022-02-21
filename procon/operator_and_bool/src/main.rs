@@ -48,6 +48,12 @@ fn main() {
     assert_eq!(false | false, false);
     // 短絡評価
     assert_eq!(false || false, false);
+
+    // XOR
+    assert_eq!(true ^ true, false);
+    assert_eq!(true | false, true);
+    assert_eq!(false | true, true);
+    assert_eq!(false | false, false);
 }
 
 fn is_int_five(a: i32) {
