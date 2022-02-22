@@ -54,6 +54,10 @@ fn main() {
     assert_eq!(true | false, true);
     assert_eq!(false | true, true);
     assert_eq!(false | false, false);
+
+    // NOT
+    assert_eq!(!true, false);
+    assert_eq!(!false, true);
 }
 
 fn is_int_five(a: i32) {
