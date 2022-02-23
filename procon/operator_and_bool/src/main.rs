@@ -58,6 +58,17 @@ fn main() {
     // NOT
     assert_eq!(!true, false);
     assert_eq!(!false, true);
+
+    // 複合代入演算子
+    let mut flag = true;
+    flag &= false;
+    assert_eq!(flag, false);
+    flag |= false;
+    assert_eq!(flag, false);
+    flag |= true;
+    assert_eq!(flag, true);
+    flag ^= true;
+    assert_eq!(flag, false);
 }
 
 fn is_int_five(a: i32) {
